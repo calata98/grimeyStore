@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -80,17 +80,19 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_inicio) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_hombre) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_mujer) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_gorras) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_accesorios) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_liquidaciones) {
+
+        }else if (id == R.id.nav_tools) {
 
         }
 
