@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.prueba, menu);
+        getMenuInflater().inflate(R.menu.app_bar, menu);
         return true;
     }
 
@@ -65,6 +66,18 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_Carro) {
+            CarroFragment carroF= new CarroFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame,carroF)
+                    .addToBackStack(null)
+                    .commit();
+            return true;
+        } else if (id == R.id.action_Log){
+            HombreFragment hombreF = new HombreFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame,hombreF)
+                    .addToBackStack(null)
+                    .commit();
             return true;
         }
 
@@ -74,31 +87,64 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        FloatingActionButton filter = (FloatingActionButton) findViewById(R.id.filter);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+
         if (id == R.id.nav_inicio) {
-            // Handle the camera action
+            filter.setVisibility(View.INVISIBLE);
         } else if (id == R.id.nav_hombre) {
-            Hombre hombreF = new Hombre();
+            HombreFragment hombreF = new HombreFragment();
+            filter.setVisibility(View.VISIBLE);
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.content_frame,hombreF)
                     .addToBackStack(null)
                     .commit();
 
         } else if (id == R.id.nav_mujer) {
+            MujerFragment MujerF = new MujerFragment();
+            filter.setVisibility(View.VISIBLE);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame,MujerF)
+                    .addToBackStack(null)
+                    .commit();
 
         } else if (id == R.id.nav_gorras) {
+            GorrasFragment gorrasF = new GorrasFragment();
+            filter.setVisibility(View.VISIBLE);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame,gorrasF)
+                    .addToBackStack(null)
+                    .commit();
 
         } else if (id == R.id.nav_accesorios) {
+            AccesoriosFragment accesoriosF = new AccesoriosFragment();
+            filter.setVisibility(View.VISIBLE);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame,accesoriosF)
+                    .addToBackStack(null)
+                    .commit();
 
         } else if (id == R.id.nav_liquidaciones) {
+            LiquidacionesFragment liquidacionesF = new LiquidacionesFragment();
+            filter.setVisibility(View.VISIBLE);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame,liquidacionesF)
+                    .addToBackStack(null)
+                    .commit();
 
         }else if (id == R.id.nav_tools) {
-
+            OpcionesFragment opcionesF = new OpcionesFragment();
+            filter.setVisibility(View.INVISIBLE);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame,opcionesF)
+                    .addToBackStack(null)
+                    .commit();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
