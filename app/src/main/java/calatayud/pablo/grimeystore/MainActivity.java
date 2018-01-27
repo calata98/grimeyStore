@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.filter);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,27 +52,24 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    /*@Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.prueba, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_Carro) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -83,6 +80,11 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_inicio) {
             // Handle the camera action
         } else if (id == R.id.nav_hombre) {
+            Hombre hombreF = new Hombre();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame,hombreF)
+                    .addToBackStack(null)
+                    .commit();
 
         } else if (id == R.id.nav_mujer) {
 
