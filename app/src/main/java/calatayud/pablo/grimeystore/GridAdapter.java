@@ -15,9 +15,9 @@ import android.widget.TextView;
 
 public class GridAdapter extends BaseAdapter {
     private Context mContext;
-    private Integer[] mThumbIds;
+    private String[] mThumbIds;
 
-    public GridAdapter(Context c, Integer [] mThumbIds) {
+    public GridAdapter(Context c, String [] mThumbIds) {
         mContext = c;
         this.mThumbIds = mThumbIds;
     }
@@ -31,7 +31,7 @@ public class GridAdapter extends BaseAdapter {
     }
 
     public long getItemId(int position) {
-        return mThumbIds[position];
+        return 0;
     }
 
     // create a new ImageView for each item referenced by the Adapter
@@ -49,7 +49,7 @@ public class GridAdapter extends BaseAdapter {
         precioP.setText("");
 
         ImageView imagenP = (ImageView) convertView.findViewById(R.id.imgP);
-        imagenP.setImageResource(mThumbIds[position]);
+        //imagenP.setImageResource(mThumbIds[position]);
 
 
         return convertView;

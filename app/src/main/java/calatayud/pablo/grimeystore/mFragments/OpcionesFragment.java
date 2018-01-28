@@ -4,9 +4,14 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 import calatayud.pablo.grimeystore.R;
 
@@ -29,6 +34,8 @@ public class OpcionesFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference rootRef = database.getReference();
 
     private OnFragmentInteractionListener mListener;
 
@@ -61,6 +68,11 @@ public class OpcionesFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        Query findHFotos = rootRef.orderByChild("sexo").equalTo("H");
+        Query findUFotos = rootRef.orderByChild("sexo").equalTo("U");
+
+        Log.i("jajaja", findHFotos.toString());
     }
 
     @Override

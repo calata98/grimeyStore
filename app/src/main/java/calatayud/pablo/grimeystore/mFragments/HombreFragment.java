@@ -9,6 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 import calatayud.pablo.grimeystore.GridAdapter;
 import calatayud.pablo.grimeystore.R;
 
@@ -27,9 +33,15 @@ public class HombreFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private GridView gv;
-    private Integer[] mThumbIds = {
-            R.drawable.ic_menu_camera, R.drawable.grimey
-    };
+    private String[] mThumbIds;
+
+
+
+
+
+
+
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -66,6 +78,11 @@ public class HombreFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+
+
+
     }
 
     @Override
