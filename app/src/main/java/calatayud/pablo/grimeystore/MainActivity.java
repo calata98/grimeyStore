@@ -1,5 +1,6 @@
 package calatayud.pablo.grimeystore;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,6 +17,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    static boolean registrado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,11 +76,13 @@ public class MainActivity extends AppCompatActivity
                     .commit();
             return true;
         } else if (id == R.id.action_Log){
-            HombreFragment hombreF = new HombreFragment();
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame,hombreF)
-                    .addToBackStack(null)
-                    .commit();
+            if (registrado){
+
+            }else{
+                Intent intLog = new Intent(this, LoginActivity.class);
+
+                startActivity(intLog);
+            }
             return true;
         }
 

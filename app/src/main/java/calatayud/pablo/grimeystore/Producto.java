@@ -5,4 +5,16 @@ package calatayud.pablo.grimeystore;
  */
 
 public class Producto {
+
+    private String nombre;
+    private String descripcion;
+    private int precio;
+    private int talla;
+    private String categoria;
+
+
+
+    Producto(){
+
+    }
 }
