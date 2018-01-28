@@ -1,8 +1,7 @@
-package calatayud.pablo.grimeystore;
+package calatayud.pablo.grimeystore.mFragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,10 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import calatayud.pablo.grimeystore.MyCarroRecyclerViewAdapter;
+import calatayud.pablo.grimeystore.R;
 import calatayud.pablo.grimeystore.dummy.DummyContent;
 import calatayud.pablo.grimeystore.dummy.DummyContent.DummyItem;
-
-import java.util.List;
 
 /**
  * A fragment representing a list of Items.

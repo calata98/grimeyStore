@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import calatayud.pablo.grimeystore.CarroFragment.OnListFragmentInteractionListener;
+import calatayud.pablo.grimeystore.mFragments.CarroFragment.OnListFragmentInteractionListener;
 import calatayud.pablo.grimeystore.dummy.DummyContent.DummyItem;
 
 import java.util.List;

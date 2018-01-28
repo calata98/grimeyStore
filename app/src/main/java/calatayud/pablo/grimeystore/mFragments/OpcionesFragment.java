@@ -1,4 +1,4 @@
-package calatayud.pablo.grimeystore;
+package calatayud.pablo.grimeystore.mFragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,16 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import calatayud.pablo.grimeystore.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link AccesoriosFragment.OnFragmentInteractionListener} interface
+ * {@link OpcionesFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link AccesoriosFragment#newInstance} factory method to
+ * Use the {@link OpcionesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AccesoriosFragment extends Fragment {
+public class OpcionesFragment extends Fragment {
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +32,7 @@ public class AccesoriosFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public AccesoriosFragment() {
+    public OpcionesFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +42,11 @@ public class AccesoriosFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment AccesoriosFragment.
+     * @return A new instance of fragment OpcionesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AccesoriosFragment newInstance(String param1, String param2) {
-        AccesoriosFragment fragment = new AccesoriosFragment();
+    public static OpcionesFragment newInstance(String param1, String param2) {
+        OpcionesFragment fragment = new OpcionesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +67,8 @@ public class AccesoriosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_accesorios, container, false);
+
+        return inflater.inflate(R.layout.fragment_opciones, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -80,7 +84,6 @@ public class AccesoriosFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-
         }
     }
 

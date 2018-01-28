@@ -9,7 +9,7 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="calatayud.pablo.grimeystore.CarroFragment"
+    tools:context="calatayud.pablo.grimeystore.mFragments.CarroFragment"
     tools:listitem="@layout/fragment_carro">
 
     <ListView

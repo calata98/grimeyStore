@@ -1,4 +1,4 @@
-package calatayud.pablo.grimeystore;
+package calatayud.pablo.grimeystore.mFragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -7,19 +7,19 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+
+import calatayud.pablo.grimeystore.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link OpcionesFragment.OnFragmentInteractionListener} interface
+ * {@link InicioFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link OpcionesFragment#newInstance} factory method to
+ * Use the {@link InicioFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class OpcionesFragment extends Fragment {
-
+public class InicioFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -31,7 +31,7 @@ public class OpcionesFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public OpcionesFragment() {
+    public InicioFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +41,11 @@ public class OpcionesFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment OpcionesFragment.
+     * @return A new instance of fragment InicioFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static OpcionesFragment newInstance(String param1, String param2) {
-        OpcionesFragment fragment = new OpcionesFragment();
+    public static InicioFragment newInstance(String param1, String param2) {
+        InicioFragment fragment = new InicioFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,8 +66,7 @@ public class OpcionesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        return inflater.inflate(R.layout.fragment_opciones, container, false);
+        return inflater.inflate(R.layout.fragment_inicio, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
