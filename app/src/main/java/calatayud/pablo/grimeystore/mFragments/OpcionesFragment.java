@@ -9,9 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import calatayud.pablo.grimeystore.R;
 
@@ -35,7 +38,7 @@ public class OpcionesFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference rootRef = database.getReference();
+    DatabaseReference prodRef = database.getReference().child("PRODUCTOS");
 
     private OnFragmentInteractionListener mListener;
 
@@ -69,10 +72,24 @@ public class OpcionesFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-        Query findHFotos = rootRef.orderByChild("sexo").equalTo("H");
-        Query findUFotos = rootRef.orderByChild("sexo").equalTo("U");
+        Query findHFotos = prodRef.orderByChild("SEXO").equalTo("H");
 
-        Log.i("jajaja", findHFotos.toString());
+        findHFotos.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+
+
+
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     @Override
